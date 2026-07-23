@@ -1,0 +1,15 @@
+# python
+.venv/
+__pycache__/
+*.py[cod]
+
+# spark local state
+spark-warehouse/
+metastore_db/
+derby.log
+
+# data
+data/
+
+# secrets
+.env
