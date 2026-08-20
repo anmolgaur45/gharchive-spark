@@ -20,7 +20,6 @@ def parse_events(df: DataFrame) -> DataFrame:
         col("actor.login").alias("actor_login"),
         col("repo.id").alias("repo_id"),
         col("repo.name").alias("repo_name"),
-        col("payload"),
         col("payload_parsed.ref").alias("payload_ref"),
         col("payload_parsed.push_id").alias("payload_push_id"),
         col("payload_parsed.head").alias("payload_head"),
