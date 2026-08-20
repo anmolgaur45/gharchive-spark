@@ -6,4 +6,4 @@ def write_parquet(df: DataFrame, path: str, mode: str = "overwrite") -> None:
 
     df = df.withColumn("event_date", to_date(col("created_at")))
 
-    df.write.mode(mode).partitionBy("event_date").parquet(path)
+    df.write.mode(mode).option("compression", "zstd").partitionBy("event_date").parquet(path)
